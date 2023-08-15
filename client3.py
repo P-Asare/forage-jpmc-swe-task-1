@@ -35,7 +35,7 @@ def getDataPoint(quote):
     stock = quote['stock']
     bid_price = float(quote['top_bid']['price'])
     ask_price = float(quote['top_ask']['price'])
-    price = bid_price
+    price = (bid_price + ask_price) / 2 # Average of bid and ask price for stock price
     return stock, bid_price, ask_price, price
 
 
